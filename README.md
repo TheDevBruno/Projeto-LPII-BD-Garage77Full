@@ -20,16 +20,40 @@ O sistema simula a gestão de um estacionamento para a empresa fictícia **Garag
 
 Garage77-Full/
 │
-├── src/
-│├── model/ # Classes de modelo (Cliente, Veiculo, Locacao, etc.)
-│ ├── dao/ # Acesso ao banco de dados (DAO)
-│ ├── view/ # Telas Swing do sistema
-│ └── util/ # Utilitários (conexão, helpers)
+├── src/                            # Código-fonte do projeto
+│   ├── conexao/                    # Classe de conexão com o banco de dados Firebird
+│   │   └── ConexaoBD.java
+│   │
+│   ├── dao/                        # Data Access Object (consultas e transações com o banco)
+│   │   ├── ClienteDAO.java
+│   │   ├── VeiculoDAO.java
+│   │   ├── VagaDAO.java
+│   │   └── LocacaoDAO.java
+│   │
+│   ├── model/                      # Classes de modelo (entidades)
+│   │   ├── Cliente.java
+│   │   ├── Veiculo.java
+│   │   ├── Vaga.java
+│   │   └── Locacao.java
+│   │
+│   ├── view/                       # Telas do sistema (interface Swing)
+│   │   ├── TelaPrincipal.java
+│   │   ├── TelaCadastroCliente.java
+│   │   ├── TelaCadastroVeiculo.java
+│   │   ├── TelaCadastroVaga.java
+│   │   ├── TelaCadastroLocacao.java
+│   │   ├── TelaPesquisaClientes.java
+│   │   ├── TelaPesquisaVeiculos.java
+│   │   └── TelaFinalizarLocacao.java
+│   │
+│   └── util/                       # Utilitários e helpers (se houver)
+│       └── ValidadorPlaca.java     # Exemplo de validação de placas duplicadas
 │
-├── database/
-│ └── garage77.fdb # Arquivo do banco Firebird (não incluído no repositório)
-│
-└── README.md # Este arquivo
+├── .gitignore                      # Arquivos e pastas ignoradas pelo Git
+├── README.md                       # Descrição e instruções do projeto
+└── database/                       # Pasta sugerida para backup do banco Firebird
+    └── garage77.fdb                # Arquivo do banco de dados (não incluído no GitHub)
+
 
 yaml
 Copiar
