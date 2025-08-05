@@ -21,7 +21,7 @@ O sistema simula a gestão de um estacionamento para a empresa fictícia **Garag
 Garage77-Full/
 │
 ├── src/
-│ ├── model/ # Classes de modelo (Cliente, Veiculo, Locacao, etc.)
+│├── model/ # Classes de modelo (Cliente, Veiculo, Locacao, etc.)
 │ ├── dao/ # Acesso ao banco de dados (DAO)
 │ ├── view/ # Telas Swing do sistema
 │ └── util/ # Utilitários (conexão, helpers)
